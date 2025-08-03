@@ -4,7 +4,9 @@ com/example/taskmanagement/entity/User.class
 com/example/taskmanagement/exception/ResourceNotFoundException.class
 com/example/taskmanagement/repository/UserRepository.class
 com/example/taskmanagement/entity/Task$TaskStatus.class
+com/example/taskmanagement/dto/CreateUserRequest.class
 com/example/taskmanagement/dto/UserDto.class
+com/example/taskmanagement/service/UserService.class
 com/example/taskmanagement/controller/TaskController.class
 com/example/taskmanagement/entity/User$Role.class
 com/example/taskmanagement/dto/CreateTaskRequest.class
@@ -13,3 +15,4 @@ com/example/taskmanagement/dto/TaskDto.class
 com/example/taskmanagement/entity/Task$Priority.class
 com/example/taskmanagement/repository/TaskRepository.class
 com/example/taskmanagement/TaskManagementApplication.class
+com/example/taskmanagement/controller/UserController.class

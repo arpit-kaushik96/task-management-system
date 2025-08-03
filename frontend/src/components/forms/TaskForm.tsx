@@ -50,7 +50,6 @@ const TaskForm: React.FC<TaskFormProps> = ({ task, onSubmit, onCancel, loading =
   });
 
   const watchedStatus = watch('status');
-  const watchedPriority = watch('priority');
 
   const handleFormSubmit = (data: TaskFormData) => {
     const submitData: CreateTaskRequest = {
@@ -75,9 +74,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ task, onSubmit, onCancel, loading =
     }
   };
 
-  const getPriorityIcon = (priority: string) => {
-    return <Star className="h-4 w-4" />;
-  };
+
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-2xl">
@@ -174,7 +171,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ task, onSubmit, onCancel, loading =
                 <option value="URGENT">🔴 Urgent</option>
               </select>
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                {getPriorityIcon(watchedPriority)}
+                <Star className="h-4 w-4" />
               </div>
             </div>
           </div>

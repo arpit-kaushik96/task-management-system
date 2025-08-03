@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Task } from '@/types';
 import { cn, formatDate, getStatusColor, getPriorityColor, getStatusIcon, getPriorityIcon, isOverdue, truncateText, getInitials } from '@/lib/utils';
 import Button from './Button';
-import { Edit, Trash2, Calendar, User, MoreVertical, Clock, CheckCircle, AlertCircle, Info } from 'lucide-react';
+import { Edit, Trash2, Calendar, User, MoreVertical, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface TaskCardProps {
   task: Task;
@@ -35,15 +35,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, onEdit, onDelete, className }
     }
   };
 
-  const getPriorityEmoji = (priority: string) => {
-    switch (priority) {
-      case 'LOW': return '🟢';
-      case 'MEDIUM': return '🟡';
-      case 'HIGH': return '🟠';
-      case 'URGENT': return '🔴';
-      default: return '⚪';
-    }
-  };
+
 
   return (
     <div 
@@ -125,7 +117,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, onEdit, onDelete, className }
           'status-badge inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border transition-all duration-200',
           getPriorityColor(task.priority)
         )}>
-          <span className="mr-1">{getPriorityIcon(task.priority)}</span>
+                          <span className="mr-1">{getPriorityIcon(task.priority)}</span>
           {task.priority}
         </span>
       </div>
